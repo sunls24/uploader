@@ -1,0 +1,39 @@
+---
+import { Toaster } from "@/components/ui/sonner"
+import "@/style/global.css"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>File Uploader</title>
+  </head>
+  <body>
+    <slot />
+    <Toaster richColors={true} position="top-center" client:load />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script is:inline>
+  const theme =
+    localStorage.getItem("theme") ??
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light")
+  document.documentElement.classList[theme === "dark" ? "add" : "remove"](
+    "dark"
+  )
+</script>

@@ -1,0 +1,14 @@
+---
+import Uploader from "@/components/Uploader"
+import Path from "@/components/Path"
+import List from "@/components/List"
+import Layout from "@/layouts/Layout.astro"
+---
+
+<Layout>
+  <main class="mx-auto flex h-full w-11/12 max-w-lg flex-col gap-5 py-10">
+    <Path client:load />
+    <Uploader client:load />
+    <List client:load />
+  </main>
+</Layout>
