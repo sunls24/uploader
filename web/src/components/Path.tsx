@@ -27,7 +27,7 @@ export default function Path() {
 
   function onSelect(value: string, i: number) {
     paths[i] = value
-    if (i < paths.length - 1) {
+    if (i < pathDirs.length - 1) {
       setPathDirs(pathDirs.slice(0, i + 1))
     }
     setPaths(paths.splice(0, i + 1))
