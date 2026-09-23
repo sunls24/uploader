@@ -1,20 +1,18 @@
 ---
-import { Toaster } from "@/components/ui/sonner"
 import "@/style/global.css"
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>文件上传</title>
+    <title>文件站</title>
   </head>
   <body>
     <slot />
-    <Toaster richColors={true} position="top-center" client:load />
   </body>
 </html>
 
